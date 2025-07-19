@@ -4,9 +4,25 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
 export default function Footer() {
   const pathname = usePathname()
+  const [shouldRender, setShouldRender] = useState(false)
+
+  useEffect(() => {
+    // Check if footer already exists on the page
+    const existingFooter = document.querySelector('footer')
+    if (!existingFooter) {
+      setShouldRender(true)
+    } else {
+      // If footer exists but it's empty or just contains basic HTML, render this one
+      const hasContent = existingFooter.querySelector('.container, .grid, .space-y-6')
+      if (!hasContent) {
+        setShouldRender(true)
+      }
+    }
+  }, [])
 
   const handleNavClick = (href: string, sectionId?: string) => {
     if (href.startsWith("#") && sectionId) {
@@ -24,8 +40,13 @@ export default function Footer() {
     }
   }
 
+  // Don't render if footer already exists or if we haven't checked yet
+  if (!shouldRender) {
+    return null
+  }
+
   return (
-    <footer className="bg-gray-900 text-white">
+    <div className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-6">
@@ -243,6 +264,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   )
 }

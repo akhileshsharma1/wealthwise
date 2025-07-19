@@ -15,7 +15,6 @@ export default function Home() {
       <Services />
       <Team />
       <Contact />
-      <Footer />
     </main>
   )
 }
