@@ -46,7 +46,46 @@ return (
             <CardDescription className="text-lg text-gray-600">{service.description}</CardDescription>
           </CardHeader>
           <CardContent className="px-6 md:px-8 pb-8">
-            <p className="text-gray-700 leading-relaxed mb-8">{service.fullDescription || service.description}</p>
+            <div className="text-gray-700 leading-relaxed mb-8">
+              {service.fullDescription ? (
+                <>
+                  {service.fullDescription.split('\n\n').map((section, idx) => {
+                    // Check if this section contains bullet points
+                    if (section.includes('• ')) {
+                      const lines = section.split('\n');
+                      const heading = lines[0]; // First line before bullets
+                      const bulletItems = lines.slice(1).filter(line => line.startsWith('• '));
+                      
+                      return (
+                        <div key={idx} className="mb-8">
+                          {heading && (
+                            <p className="mb-4 font-medium">{heading}</p>
+                          )}
+                          <ul className="space-y-3 ml-4">
+                            {bulletItems.map((item, itemIdx) => (
+                              <li key={itemIdx} className="flex items-start gap-3">
+                                <div className="w-2 h-2 bg-sky-600 rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="leading-relaxed">{item.substring(2)}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )
+                    } else {
+                      // Regular paragraphs
+                      return (
+                        <p key={idx} className="mb-6 leading-relaxed">
+                          {section}
+                        </p>
+                      )
+                    }
+                  })}
+                </>
+              ) : (
+                <p className="leading-relaxed">{service.description}</p>
+              )}
+            </div>
+            
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Key Features:</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700">
               {service.features.map((feature, idx) => (

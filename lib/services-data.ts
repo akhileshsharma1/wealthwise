@@ -70,12 +70,16 @@ export const services = [
     fullDescription:
       "Our deregistration services provide professional assistance for company closure and formal deregistration processes. We guide you through every step, including company closure procedures, asset liquidation, ensuring final compliance with all regulations, and providing comprehensive documentation support. We aim for a smooth and efficient winding-up process.",
   },
-  {
-    icon: Globe,
-    title: "Mortgage Facilitation Services",
-    description: "Wealthwise aids brokers with loan docs, ApplyOnline, and smooth end-to-end processing.",
-    features: ["Loan Docs", "ApplyOnline", "CRM (Nexus)", "Full Loan Support"],
-    fullDescription:
-      "Wealthwise specializes in mortgage facilitation services, providing essential support to brokers. We assist with preparing loan documents, navigating the ApplyOnline platform, and ensuring smooth end-to-end processing of mortgage applications. Our comprehensive support includes CRM (Nexus) integration and full loan support to streamline your operations and enhance efficiency.",
-  },
+ {
+  "icon": Globe,
+  "title": "Mortgage Facilitation Services",
+  "description": "Wealthwise aids brokers with loan docs, ApplyOnline, and smooth end-to-end processing.",
+  "features": [
+    "Loan Docs",
+    "ApplyOnline",
+    "CRM (Nexus)",
+    "Full Loan Support"
+  ],
+  "fullDescription": "At Wealthwise Consulting Pvt. Ltd., we provide comprehensive mortgage application facilitation services to clients in Australia. While we are not licensed mortgage brokers, we specialize in managing the backend process by assisting clients and partnering brokers with the full preparation and coordination required for home loan applications.\n\nOur services include:\n• Preparing and organizing loan application documents using industry-standard software like ApplyOnline\n• Assisting mortgage brokers by packaging and lodging home loan applications\n• Ensuring timely, accurate, and compliant documentation for smooth processing\n• Communicating with clients, brokers, and legal professionals to ensure transactions proceed efficiently\n• Managing electronic documentation and CRM tools such as Mercury Nexus for streamlined file tracking and client communication\n• Supporting end-to-end loan processes—from initial submission through to settlement\n• Coordinating pricing requests, valuations, and other lender requirements\n\nWith Wealthwise as your backend partner, you get reliable, organized, and professional support every step of the way, helping to ensure faster approvals and a hassle-free experience."
+}
 ]
