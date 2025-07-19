@@ -52,7 +52,7 @@ export default function Footer() {
               <Link href="#" className="p-2 bg-gray-800 hover:bg-sky-600 rounded-lg transition-colors">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-gray-800 hover:bg-sky-600 rounded-lg transition-colors">
+              <Link href="https://www.instagram.com/wealthwiseconsultingpvt/?igsh=cDFkNmp2NDVlc282#" className="p-2 bg-gray-800 hover:bg-sky-600 rounded-lg transition-colors">
                 <Instagram className="h-5 w-5" />
               </Link>
             </div>
