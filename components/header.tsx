@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Calculator } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Header() {
@@ -12,12 +12,18 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("home")
   const pathname = usePathname()
 
-  // Check if we're on the blog page
+  // Check if we're on the blog or calculator page
   const isBlogPage = pathname.startsWith("/blog")
+  const isCalculatorPage = pathname.startsWith("/calculator")
 
   useEffect(() => {
     if (isBlogPage) {
       setActiveSection("blog")
+      return
+    }
+
+    if (isCalculatorPage) {
+      setActiveSection("calculator")
       return
     }
 
@@ -43,7 +49,7 @@ export default function Header() {
     handleScroll() // Call once to set initial state
 
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [isBlogPage])
+  }, [isBlogPage, isCalculatorPage])
 
   const handleNavClick = (href: string, sectionId?: string) => {
     setIsMenuOpen(false)
@@ -127,6 +133,9 @@ export default function Header() {
             <Link href="/blog" className={getLinkClass("blog")}>
               Blog
             </Link>
+            <Link href="/calculator" className={`${getLinkClass("calculator")}`}>
+              Calculator
+            </Link>
             <Link
               href="/#contact"
               className={getLinkClass("contact")}
@@ -189,6 +198,9 @@ export default function Header() {
               </Link>
               <Link href="/blog" className={getLinkClass("blog")}>
                 Blog
+              </Link>
+              <Link href="/calculator" className={`${getLinkClass("calculator")} flex items-center gap-2`}>
+                Calculator
               </Link>
               <Link
                 href="/#contact"
