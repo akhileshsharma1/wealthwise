@@ -49,7 +49,7 @@ export default function EnhancedEMICalculator() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Tax and EMI Calculator</h1>
           <p className="text-xl text-sky-100 max-w-2xl mx-auto mb-8">
-            Calculate your loan EMI with detailed monthly breakdown and interactive charts
+              Easily calculate your loan EMI and tax liabilities with detailed monthly breakdowns, interactive charts, and insightful analytics.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
