@@ -1,15 +1,13 @@
 "use client"
-
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react"
-import { submitContactForm } from "@/lib/contact-actions"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -28,7 +26,8 @@ export default function Contact() {
     setSubmitStatus("idle")
 
     try {
-      await submitContactForm(formData)
+      // Simulate form submission
+      await new Promise((resolve) => setTimeout(resolve, 1000))
       setSubmitStatus("success")
       // Reset form
       setFormData({
@@ -53,6 +52,23 @@ export default function Contact() {
     })
   }
 
+  const handleEmailConsultation = () => {
+    const subject = encodeURIComponent("Consultation Request - WealthWise")
+    const body = encodeURIComponent(`Hello,
+
+I would like to schedule a consultation to discuss my financial needs.
+
+Please let me know your available time slots.
+
+Best regards,`)
+
+    window.open(`mailto:info.wealthwise31@gmail.com?subject=${subject}&body=${body}`)
+  }
+
+  const handlePhoneConsultation = () => {
+    window.open("tel:+9779843066123")
+  }
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -62,7 +78,6 @@ export default function Contact() {
             Ready to take your business to the next level? Contact us today for a consultation.
           </p>
         </div>
-
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <Card className="border-0 shadow-lg">
@@ -78,13 +93,11 @@ export default function Contact() {
                     </AlertDescription>
                   </Alert>
                 )}
-
                 {submitStatus === "error" && (
                   <Alert variant="destructive" className="mb-6">
                     <AlertDescription>There was an error submitting your message. Please try again.</AlertDescription>
                   </Alert>
                 )}
-
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -117,7 +130,6 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
@@ -147,7 +159,6 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Message *
@@ -163,7 +174,6 @@ export default function Contact() {
                       disabled={isSubmitting}
                     />
                   </div>
-
                   <Button
                     type="submit"
                     size="lg"
@@ -176,7 +186,6 @@ export default function Contact() {
               </CardContent>
             </Card>
           </div>
-
           <div className="space-y-6">
             <Card className="border-0 shadow-lg">
               <CardHeader>
@@ -190,7 +199,6 @@ export default function Contact() {
                     <p className="text-gray-600">+977 9843066123</p>
                   </div>
                 </div>
-
                 <div className="flex items-start gap-4">
                   <Mail className="h-6 w-6 text-sky-600 mt-1" />
                   <div>
@@ -198,7 +206,6 @@ export default function Contact() {
                     <p className="text-gray-600">info.wealthwise31@gmail.com</p>
                   </div>
                 </div>
-
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-sky-600 mt-1" />
                   <div>
@@ -206,7 +213,6 @@ export default function Contact() {
                     <p className="text-gray-600">Gyaneshwor-30, Kathmandu, Nepal</p>
                   </div>
                 </div>
-
                 <div className="flex items-start gap-4">
                   <Clock className="h-6 w-6 text-sky-600 mt-1" />
                   <div>
@@ -220,16 +226,35 @@ export default function Contact() {
                 </div>
               </CardContent>
             </Card>
-
             <Card className="border-0 shadow-lg bg-gradient-to-br from-sky-600 to-blue-700 text-white">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-4">Ready to Get Started?</h3>
                 <p className="mb-4 opacity-90">
                   Schedule a free consultation with our experts to discuss your financial needs.
                 </p>
-                <Button variant="secondary" className="w-full" onClick={() => window.open("tel:+9779843066123")}>
-                  Book Consultation
-                </Button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="secondary" className="w-full">
+                      Book Consultation
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-full min-w-[200px]" align="center">
+                    <DropdownMenuItem onClick={handleEmailConsultation} className="cursor-pointer">
+                      <Mail className="mr-2 h-4 w-4" />
+                      <div className="flex flex-col">
+                        <span className="font-medium">Email Consultation</span>
+                        <span className="text-xs text-gray-500">Send us an email</span>
+                      </div>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={handlePhoneConsultation} className="cursor-pointer">
+                      <Phone className="mr-2 h-4 w-4" />
+                      <div className="flex flex-col">
+                        <span className="font-medium">Phone Consultation</span>
+                        <span className="text-xs text-gray-500">Call us directly</span>
+                      </div>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </CardContent>
             </Card>
           </div>

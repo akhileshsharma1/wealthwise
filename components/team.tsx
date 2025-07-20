@@ -22,7 +22,7 @@ export default function Team() {
     },
     {
       name: "Mr. Ramesh Shrestha",
-      position: "Consultant & Founding Shareholder",
+      position: "Director",
       qualification: "Chartered Accountant (ICAI)",
       image: "/images/ramesh.jpg",
       description: "Specializes in business valuation, audit, and corporate finance solutions.",
@@ -30,7 +30,7 @@ export default function Team() {
     },
     {
       name: "Mr. Mausam Agrawal",
-      position: "Consultant & Founding Shareholder",
+      position: "Director",
       qualification: "Chartered Accountant, Bachelor's Degree",
       image: "/images/mausam.jpg",
       description: "Oversees operations and client relationships with focus on business development.",

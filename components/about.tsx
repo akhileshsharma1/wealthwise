@@ -3,9 +3,9 @@ import { CheckCircle, Users, Award, TrendingUp } from "lucide-react"
 export default function About() {
   const stats = [
     { icon: Users, label: "Team Members", value: "9+" },
-    { icon: Award, label: "Years Experience", value: "10+" },
-    { icon: TrendingUp, label: "Clients Served", value: "200+" },
-    { icon: CheckCircle, label: "Success Rate", value: "98%" },
+    { icon: Award, label: "Years Experience", value: "8+" },
+    { icon: TrendingUp, label: "Clients Served", value: "50+" },
+    { icon: CheckCircle, label: "Success Rate", value: "100%" },
   ]
 
   return (
@@ -37,7 +37,7 @@ With Wealthwise, you gain a reliable and experienced partner committed to excell
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-sky-600" />
-                  <span className="text-gray-700">Semi-qualified CAs: 2</span>
+                  <span className="text-gray-700">Semi-qualified CAs: 3</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-sky-600" />
