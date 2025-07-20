@@ -175,7 +175,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://niadda.gov.np"
+                  href="https://ibn.gov.np/"
                   target="_blank"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
