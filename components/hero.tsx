@@ -1,13 +1,19 @@
 "use client"
 
+import { useState } from "react"
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Phone, Mail } from "lucide-react"
 
 export default function Hero() {
   return (
-    <section id="home" className="pt-20 bg-gradient-to-br from-sky-50 to-blue-100 min-h-screen flex items-center">
+    <section
+      id="home"
+      className="pt-20 bg-gradient-to-br from-sky-50 to-blue-100 min-h-screen flex items-center"
+    >
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* LEFT: Hero Text */}
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
@@ -19,7 +25,6 @@ export default function Hero() {
                 compliance, and business support services in Nepal.
               </p>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
@@ -36,7 +41,6 @@ export default function Hero() {
                 Learn More
               </Button>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-6 pt-8">
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-sky-600" />
@@ -49,30 +53,45 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-              <div className="space-y-6">
-                <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 bg-sky-600 text-white rounded-lg flex items-center justify-center font-bold text-xl">
-                    W
-                  </div>
-                  <span className="text-sm text-gray-500">Professional Services</span>
-                </div>
-                <div className="space-y-4">
-                  <div className="h-4 bg-sky-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-sky-600 rounded-full w-4/5"></div>
-                  </div>
-                  <div className="h-4 bg-sky-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-sky-600 rounded-full w-3/5"></div>
-                  </div>
-                  <div className="h-4 bg-sky-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-sky-600 rounded-full w-5/6"></div>
-                  </div>
-                </div>
-                <p className="text-gray-600 text-sm">Trusted by businesses across Nepal</p>
+          {/* RIGHT: Chairman's Statement with Tilt Effect */}
+          <motion.div
+            whileHover={{ rotateX: 5, rotateY: -5, scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="bg-white rounded-3xl shadow-2xl p-8 space-y-6 max-w-xl mx-auto"
+            style={{ perspective: 1000 }}
+          >
+            {/* Header */}
+            <div className="flex items-center gap-6">
+              <div className="w-28 h-32 overflow-hidden rounded-xl shadow-md border-2 border-sky-600">
+                <img
+                  src="/images/kinjal.jpg"
+                  alt="Chairman Kinjal Puri"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-3xl font-extrabold text-slate-800">Chairman's Statement</h3>
+                <div className="h-1 w-16 bg-sky-600 mt-2 rounded-full" />
               </div>
             </div>
-          </div>
+
+            {/* Statement */}
+            <blockquote className="relative text-gray-700 text-base leading-relaxed pl-6 border-l-4 border-sky-500">
+              “At WealthWise, sustainable financial growth is not just a destination—it’s a journey. Through insightful
+              planning and unwavering commitment, we strive to shape a financially empowered Nepal.”
+            </blockquote>
+
+            {/* Signature & Name */}
+            <div className="text-right mt-6">
+              <h4 className="text-xl font-semibold text-slate-800">Kinjal Puri</h4>
+              <p className="text-slate-500 text-sm">Chairman, WealthWise</p>
+            </div>
+
+            {/* Logo / Tag */}
+            <div className="flex justify-end pt-2">
+              <span className="text-sky-600 font-semibold tracking-wider text-sm">WEALTHWISE</span>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

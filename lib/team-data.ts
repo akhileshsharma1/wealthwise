@@ -1,12 +1,12 @@
 export const teamMembers = [
   {
     name: "Mr. Kinjal Puri",
-    position: "Chairman",
+    position: "Executive Chairman",
     qualification: "Semi-qualified CA, B.Com",
     image: "/images/kinjal.jpg",
     description: "Leading the firm with extensive experience in financial advisory and strategic planning.",
     fullDescription:
-      "Mr. Kinjal Puri, the Chairman of Wealthwise Consulting Pvt. Ltd., is a semi-qualified Chartered Accountant and holds a B.Com degree specializing in Accounting and Finance from a renowned institution in India. With over 7 years of professional experience, he brings deep expertise in auditing, accounting, taxation, and business consulting.\n\nMr. Puri has completed his articleship at one of India's top audit firms and has served as an Audit Manager at one of Nepal's oldest and most respected firms. His career includes extensive audit and advisory work for multinational corporations, public sector undertakings, listed entities, and private companies across both India and Nepal. His leadership reflects a commitment to precision, regulatory compliance, and delivering value-driven financial solutions to clients across borders.",
+      "Mr. Kinjal Puri, the Executive Chairman of Wealthwise Consulting Pvt. Ltd., is a semi-qualified Chartered Accountant and holds a B.Com degree specializing in Accounting and Finance from a renowned institution in India. With over 7 years of professional experience, he brings deep expertise in auditing, accounting, taxation, and business consulting.\n\nMr. Puri has completed his articleship at one of India's top audit firms and has served as an Audit Manager at one of Nepal's oldest and most respected firms. His career includes extensive audit and advisory work for multinational corporations, public sector undertakings, listed entities, and private companies across both India and Nepal. His leadership reflects a commitment to precision, regulatory compliance, and delivering value-driven financial solutions to clients across borders.",
     experience: "7+ years",
     education: ["Semi-qualified Chartered Accountant", "B.Com (Accounting and Finance) from India"],
     email: "kinjal.wealthwise@outlook.com",

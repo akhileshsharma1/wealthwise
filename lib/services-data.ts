@@ -72,8 +72,8 @@ export const services = [
   },
  {
   "icon": Globe,
-  "title": "Mortgage Facilitation Services",
-  "description": "Wealthwise aids brokers with loan docs, ApplyOnline, and smooth end-to-end processing.",
+  "title": "Mortgage Facilitation Services(Australia)",
+  "description": "Wealthwise aids brokers with loan docs, ApplyOnline, and end-to-end processing.",
   "features": [
     "Loan Docs",
     "ApplyOnline",

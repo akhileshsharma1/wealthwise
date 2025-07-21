@@ -81,10 +81,10 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/images/wealthwise-logo.png"
+              src="/images/wealthwise-logo.jpg"
               alt="Wealthwise Logo"
-              width={180}
-              height={60}
+              width={250}
+              height={100}
               className="h-12 w-auto"
             />
           </Link>

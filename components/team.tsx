@@ -6,7 +6,7 @@ export default function Team() {
   const teamMembers = [
     {
       name: "Mr. Kinjal Puri",
-      position: "Chairman",
+      position: "Executive Chairman",
       qualification: "Semi-qualified CA, B.Com",
       image: "/images/kinjal.jpg",
       description: "Leading the firm with extensive experience in financial advisory and strategic planning.",
