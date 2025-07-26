@@ -62,7 +62,7 @@ Please let me know your available time slots.
 
 Best regards,`)
 
-    window.open(`mailto:info.wealthwise31@gmail.com?subject=${subject}&body=${body}`)
+    window.open(`mailto:info@wealthwise.com.np?subject=${subject}&body=${body}`)
   }
 
   const handlePhoneConsultation = () => {
@@ -203,7 +203,7 @@ Best regards,`)
                   <Mail className="h-6 w-6 text-sky-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">info.wealthwise31@gmail.com</p>
+                    <p className="text-gray-600">info@wealthwise.com.np</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
