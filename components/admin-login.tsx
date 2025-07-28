@@ -108,14 +108,7 @@ export default function AdminLogin() {
               </Button>
             </form>
 
-            <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-600 text-center">
-                <strong>Demo Credentials:</strong>
-                <br />
-                Username: admin
-                <br />
-                Password: wealthwise2024
-              </p>
+            <div className="mt-6 p-4 bg-gray-50 rounded-lg">               
             </div>
           </CardContent>
         </Card>
