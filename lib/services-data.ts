@@ -81,5 +81,14 @@ export const services = [
     "Full Loan Support"
   ],
   "fullDescription": "At Wealthwise Consulting Pvt. Ltd., we provide comprehensive mortgage application facilitation services to clients in Australia. While we are not licensed mortgage brokers, we specialize in managing the backend process by assisting clients and partnering brokers with the full preparation and coordination required for home loan applications.\n\nOur services include:\n• Preparing and organizing loan application documents using industry-standard software like ApplyOnline\n• Assisting mortgage brokers by packaging and lodging home loan applications\n• Ensuring timely, accurate, and compliant documentation for smooth processing\n• Communicating with clients, brokers, and legal professionals to ensure transactions proceed efficiently\n• Managing electronic documentation and CRM tools such as Mercury Nexus for streamlined file tracking and client communication\n• Supporting end-to-end loan processes—from initial submission through to settlement\n• Coordinating pricing requests, valuations, and other lender requirements\n\nWith Wealthwise as your backend partner, you get reliable, organized, and professional support every step of the way, helping to ensure faster approvals and a hassle-free experience."
-}
+},
+{
+    icon: TrendingUp,
+    title: "Income Tax Return – Australia",
+    description:
+      "We help individuals, sole traders, and expats lodge accurate, compliant Australian tax returns through myGov and the ATO, maximising deductions, ensuring secure handling, and offering flexible support in Australia or overseas.",
+    features: ["Lodgement through myGov linked to ATO", "Compliance with the latest Australian tax laws and ATO guidelines", "Maximisation of allowable deductions and offsets", "Assistance for residents, non-residents, and expats", "Secure handling of your financial information", "Support for both current and prior year returns", "Flexible communication"],
+    fullDescription:
+      "We assist individuals, sole traders, and expats in preparing and lodging their Australian income tax returns through myGov and the Australian Taxation Office (ATO). Our expert team ensures accurate compliance with Australian tax laws, maximises your eligible deductions, and guarantees timely lodgement—whether you are in Australia or overseas.",
+  },
 ]
