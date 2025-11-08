@@ -83,7 +83,7 @@ export default function Hero() {
 
             {/* Signature & Name */}
             <div className="text-right mt-6">
-              <h4 className="text-xl font-semibold text-slate-800">Kinjal Puri</h4>
+              <h4 className="text-xl font-semibold text-slate-800">CA Kinjal Puri</h4>
               <p className="text-slate-500 text-sm">Chairman, WealthWise</p>
             </div>
 

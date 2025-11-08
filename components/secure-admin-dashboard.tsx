@@ -34,7 +34,7 @@ export default function SecureAdminDashboard() {
   const router = useRouter()
 
   const categories = ["Tax", "Business", "Finance", "Compliance", "HR", "Technology"]
-  const authors = ["CA Muskan Agrawal", "CA Manish Shrestha", "Kinjal Puri", "Jiban Prajuli"]
+  const authors = ["CA Muskan Agrawal", "CA Manish Shrestha", "CA Kinjal Puri", "Jiban Prajuli"]
 
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([])
   const [contactSubmissions, setContactSubmissions] = useState<ContactSubmission[]>([])

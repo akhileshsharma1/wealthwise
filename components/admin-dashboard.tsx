@@ -24,7 +24,7 @@ export default function AdminDashboard() {
   })
 
   const categories = ["Tax", "Business", "Finance", "Compliance", "HR", "Technology"]
-  const authors = ["CA Muskan Agrawal", "CA Manish Shrestha", "Kinjal Puri", "Jiban Prajuli"]
+  const authors = ["CA Muskan Agrawal", "CA Manish Shrestha", "CA Kinjal Puri", "Jiban Prajuli"]
 
   const [blogPosts, setBlogPosts] = useState([
     {
@@ -59,7 +59,7 @@ export default function AdminDashboard() {
       id: 4,
       title: "ESG Compliance for Nepali Corporations",
       excerpt: "Environmental, Social, and Governance compliance requirements for modern businesses.",
-      author: "Kinjal Puri",
+      author: "CA Kinjal Puri",
       date: "2024-01-05",
       category: "Compliance",
       status: "Published",
