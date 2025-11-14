@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function Team() {
   const teamMembers = [
     {
-      name: "Mr. Kinjal Puri",
+      name: "CA Kinjal Puri",
       position: "Executive Chairman",
       qualification: "Semi-qualified CA, B.Com",
       image: "/images/kinjal.jpg",
@@ -21,7 +21,7 @@ export default function Team() {
       slug: "mr-bibek-parajuli",
     },
     {
-      name: "Mr. Ramesh Shrestha",
+      name: "CA Ramesh Shrestha",
       position: "Director",
       qualification: "Chartered Accountant (ICAI)",
       image: "/images/ramesh.jpg",
@@ -29,7 +29,7 @@ export default function Team() {
       slug: "mr-ramesh-shrestha",
     },
     {
-      name: "Mr. Mausam Agrawal",
+      name: "CA Mausam Agrawal",
       position: "Director",
       qualification: "Chartered Accountant, Bachelor's Degree",
       image: "/images/mausam.jpg",
@@ -116,7 +116,7 @@ export default function Team() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
-                  2
+                  3
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Full-time CAs</h4>
                 <p className="text-gray-600 text-sm">Fully qualified Chartered Accountants</p>
@@ -130,7 +130,7 @@ export default function Team() {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
-                  3
+                  2
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Semi-qualified CAs</h4>
                 <p className="text-gray-600 text-sm">CA articleship completed professionals</p>

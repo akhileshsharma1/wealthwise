@@ -64,7 +64,7 @@ export default function Hero() {
             <div className="flex items-center gap-6">
               <div className="w-28 h-32 overflow-hidden rounded-xl shadow-md border-2 border-sky-600">
                 <img
-                  src="/images/kinjal.jpg"
+                  src="/images/chairman.jpg"
                   alt="Chairman Kinjal Puri"
                   className="w-full h-full object-cover"
                 />

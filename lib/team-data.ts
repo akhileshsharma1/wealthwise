@@ -1,6 +1,6 @@
 export const teamMembers = [
   {
-    name: "Mr. Kinjal Puri",
+    name: "CA Kinjal Puri",
     position: "Executive Chairman",
     qualification: "Chartered Accountant, B.Com",
     image: "/images/kinjal.jpg",
@@ -30,7 +30,7 @@ export const teamMembers = [
     slug: "mr-bibek-parajuli",
   },
   {
-    name: "Mr. Ramesh Shrestha",
+    name: "CA Ramesh Shrestha",
     position: "Director",
     qualification: "Chartered Accountant (ICAI)",
     image: "/images/ramesh.jpg",
@@ -45,7 +45,7 @@ export const teamMembers = [
     slug: "mr-ramesh-shrestha",
   },
   {
-    name: "Mr. Mausam Agrawal",
+    name: "CA Mausam Agrawal",
     position: "Director",
     qualification: "Chartered Accountant, Bachelor's Degree",
     image: "/images/mausam.jpg",
