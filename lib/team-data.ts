@@ -12,10 +12,10 @@ export const teamMembers = [
     email: "kinjal.wealthwise@outlook.com",
     phone: "+977-9843066123",
     linkedin: "linkedin.com/in/kinjalpuri",
-    slug: "mr-kinjal-puri",
+    slug: "ca-kinjal-puri",
   },
   {
-    name: "Mr. Bibek Parajuli",
+    name: "CA Bibek Parajuli",
     position: "Managing Director",
     qualification: "Semi-qualified CA, Bachelor's Degree",
     image: "/images/bibek.jpg",
@@ -27,7 +27,7 @@ export const teamMembers = [
     email: "bibek.wealthwise@outlook.com",
     phone: "+977-9741819815",
     linkedin: "linkedin.com/in/bibekparajuli",
-    slug: "mr-bibek-parajuli",
+    slug: "ca-bibek-parajuli",
   },
   {
     name: "CA Ramesh Shrestha",

@@ -13,7 +13,7 @@ export default function Team() {
       slug: "mr-kinjal-puri",
     },
     {
-      name: "Mr. Bibek Parajuli",
+      name: "CA Bibek Parajuli",
       position: "Managing Director",
       qualification: "Semi-qualified CA, Bachelor's Degree",
       image: "/images/bibek.jpg",
