@@ -2,6 +2,7 @@
 
 import { executeQuery } from "./mysql"
 import type { BlogPost } from "./mysql"
+import { revalidatePath } from "next/cache"
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
   try {
@@ -56,6 +57,7 @@ export async function createBlogPost(postData: {
       throw new Error("Failed to retrieve created post")
     }
 
+    revalidatePath("/", "layout")
     return createdPost
   } catch (error) {
     console.error("Error creating blog post:", error)
@@ -107,6 +109,7 @@ export async function updateBlogPost(id: number, postData: Partial<BlogPost>): P
       throw new Error("Failed to retrieve updated post")
     }
 
+    revalidatePath("/", "layout")
     return updatedPost
   } catch (error) {
     console.error("Error updating blog post:", error)
@@ -117,6 +120,7 @@ export async function updateBlogPost(id: number, postData: Partial<BlogPost>): P
 export async function deleteBlogPost(id: number): Promise<boolean> {
   try {
     await executeQuery("DELETE FROM blog_posts WHERE id = ?", [id])
+    revalidatePath("/", "layout")
     return true
   } catch (error) {
     console.error("Error deleting blog post:", error)

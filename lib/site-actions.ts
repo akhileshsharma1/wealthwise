@@ -1,6 +1,7 @@
 "use server"
 
 import { executeQuery } from "./mysql"
+import { revalidatePath } from "next/cache"
 
 export interface SiteSetting {
   id: number
@@ -59,6 +60,7 @@ export async function updateSetting(key: string, value: string): Promise<boolean
       "UPDATE site_settings SET setting_value = ? WHERE setting_key = ?",
       [value, key]
     )
+    revalidatePath("/", "layout")
     return true
   } catch (error) {
     console.error("Error updating setting:", error)
@@ -77,6 +79,7 @@ export async function bulkUpdateSettings(
         [key, value]
       )
     }
+    revalidatePath("/", "layout")
     return true
   } catch (error) {
     console.error("Error bulk updating settings:", error)

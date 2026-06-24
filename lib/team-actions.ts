@@ -1,6 +1,7 @@
 "use server"
 
 import { executeQuery } from "./mysql"
+import { revalidatePath } from "next/cache"
 
 export interface TeamMember {
   id: number
@@ -94,6 +95,7 @@ export async function createTeamMember(data: {
         data.linkedin, data.slug, data.sort_order ?? 99,
       ]
     )
+    revalidatePath("/", "layout")
     return true
   } catch (error) {
     console.error("Error creating team member:", error)
@@ -126,6 +128,7 @@ export async function updateTeamMember(
     if (fields.length === 0) return true
     values.push(id)
     await executeQuery(`UPDATE team_members SET ${fields.join(", ")} WHERE id = ?`, values)
+    revalidatePath("/", "layout")
     return true
   } catch (error) {
     console.error("Error updating team member:", error)
@@ -136,6 +139,7 @@ export async function updateTeamMember(
 export async function deleteTeamMember(id: number): Promise<boolean> {
   try {
     await executeQuery("DELETE FROM team_members WHERE id = ?", [id])
+    revalidatePath("/", "layout")
     return true
   } catch (error) {
     console.error("Error deleting team member:", error)

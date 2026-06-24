@@ -1,6 +1,7 @@
 "use server"
 
 import { executeQuery } from "./mysql"
+import { revalidatePath } from "next/cache"
 
 export interface Service {
   id: number
@@ -89,6 +90,7 @@ export async function createService(data: {
         data.sort_order ?? 99,
       ]
     )
+    revalidatePath("/", "layout")
     return true
   } catch (error) {
     console.error("Error creating service:", error)
@@ -121,6 +123,7 @@ export async function updateService(
     if (fields.length === 0) return true
     values.push(id)
     await executeQuery(`UPDATE services SET ${fields.join(", ")} WHERE id = ?`, values)
+    revalidatePath("/", "layout")
     return true
   } catch (error) {
     console.error("Error updating service:", error)
@@ -131,6 +134,7 @@ export async function updateService(
 export async function deleteService(id: number): Promise<boolean> {
   try {
     await executeQuery("DELETE FROM services WHERE id = ?", [id])
+    revalidatePath("/", "layout")
     return true
   } catch (error) {
     console.error("Error deleting service:", error)
