@@ -13,16 +13,8 @@ export async function authenticateAdmin(username: string, password: string): Pro
       return false
     }
 
-    // For demo purposes, we'll use simple comparison
-    // In production, use proper bcrypt comparison
-    if (username === "admin" && password === "wealthwise2024") {
-      return true
-    }
-
-    // Uncomment this for proper bcrypt comparison in production:
-    // return await bcrypt.compare(password, results[0].password_hash)
-
-    return false
+    // Proper bcrypt comparison against the DB hash
+    return await bcrypt.compare(password, results[0].password_hash)
   } catch (error) {
     console.error("Error authenticating admin:", error)
     return false
